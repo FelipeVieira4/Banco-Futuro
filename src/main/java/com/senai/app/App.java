@@ -17,7 +17,6 @@ public class App
         ContaBancaria cb1 = new ContaBancaria();
         cb1.addCliente(c1);
         cb1.addCliente(new Cliente(1, "José"));
-        cb1.addCliente(new Cliente(2, "Arthur"));
 
         System.out.println(cb1.getClientes());
     }

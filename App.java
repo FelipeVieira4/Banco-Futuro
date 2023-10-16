@@ -18,10 +18,12 @@ public class App
         ContaBancaria cb1 = new ContaFactory().criarBancaria();
         cb1.addCliente(c1);
         cb1.addCliente(new Cliente(1, "José"));
+        cb1.setId(2);
 
-        System.out.println(cb1.getClientes());
+        System.out.println(cb1.getId());
 
         ContaInvestimento ci1 = new ContaFactory().criarInvestimento();
+        
         ci1.addCliente(c1);
         ci1.addCliente(new Cliente(1, "José"));
 

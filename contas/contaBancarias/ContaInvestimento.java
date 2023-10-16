@@ -8,4 +8,8 @@ public class ContaInvestimento extends ContaBancaria{
   
   private ArrayList<Investimento> investimentos;
 
+  public String helloWorld(){
+    return "h1";
+  }
+
 }

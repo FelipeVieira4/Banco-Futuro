@@ -8,7 +8,6 @@ import contas.cliente.Cliente;
 
 public class ContaBancaria implements OperacoesBancarias{
 
-    private ArrayList<Cliente> clientes=new ArrayList<Cliente>();
     private HashMap<Integer,Cliente> listaCliente = new HashMap<>();
 
     private int id;

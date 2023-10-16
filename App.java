@@ -6,6 +6,8 @@ import contas.cliente.Cliente;
 import contas.contaBancarias.ContaBancaria;
 import contas.contaBancarias.ContaFactory;
 import contas.contaBancarias.ContaInvestimento;
+import tipos.Investimento;
+import tipos.TipoInvestimeto;
 
 public class App 
 {
@@ -22,11 +24,17 @@ public class App
 
         System.out.println(cb1.getId());
 
+        Investimento investimento1 = new Investimento(0,TipoInvestimeto.Agricultura,1200);
+        Investimento investimento2 = new Investimento(1,TipoInvestimeto.Agricultura,600);
+        
         ContaInvestimento ci1 = new ContaFactory().criarInvestimento();
         
+        ci1.addInvestimento(investimento1);
+        ci1.addInvestimento(investimento2);
+
         ci1.addCliente(c1);
         ci1.addCliente(new Cliente(1, "José"));
 
-        System.out.println(ci1.getClientes());
+        System.out.println(ci1.calcularLucroMensal());
     }
 }

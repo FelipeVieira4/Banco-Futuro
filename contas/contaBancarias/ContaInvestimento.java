@@ -15,4 +15,14 @@ public class ContaInvestimento extends ContaBancaria{
   public void removeInvestimento(int id){
     listaInvestimentos.remove(id);
   }
+
+  public float calcularLucroMensal(){
+    
+    float lucro = 0.0f;
+    for(Investimento i: listaInvestimentos.values()){
+      lucro+=i.getLucroMensal();
+    }
+    return lucro;
+    //return (float)listaInvestimentos.values().stream().mapToDouble(Investimento::getLucroMensal).sum();
+  }
 }

@@ -12,10 +12,19 @@ public class Investimento {
   public void setId(int id) {
     this.id = id;
   }
+  
   public TipoInvestimeto getTipo() {
     return tipo;
   }
   public void setTipo(TipoInvestimeto tipo) {
     this.tipo = tipo;
   }
+
+  public float getLucroMensal() {
+    return lucroMensal;
+  }
+  public void setLucroMensal(float lucroMensal) {
+    this.lucroMensal = lucroMensal;
+  }
+  
 }

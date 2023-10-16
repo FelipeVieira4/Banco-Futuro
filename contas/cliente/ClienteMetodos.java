@@ -1,6 +1,6 @@
 package contas.cliente;
 
-public interface ClienteAbstract {
+public interface ClienteMetodos {
   public int getId();
   public void setId(int id);
   public String getNome();

@@ -1,4 +1,4 @@
-package com.senai.contas;
+package contas.contaBancarias;
 
 public class ContaFactory {
   

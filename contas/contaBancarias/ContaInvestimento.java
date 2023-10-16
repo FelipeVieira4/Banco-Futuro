@@ -1,8 +1,8 @@
-package com.senai.contas;
+package contas.contaBancarias;
 
 import java.util.ArrayList;
 
-import com.senai.tipos.Investimento;
+import tipos.Investimento;
 
 public class ContaInvestimento extends ContaBancaria{
   

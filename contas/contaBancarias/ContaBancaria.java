@@ -1,8 +1,9 @@
-package com.senai.contas;
+package contas.contaBancarias;
 
 import java.util.ArrayList;
 
-import com.senai.tipos.TipoConta;
+import tipos.TipoConta;
+import contas.cliente.Cliente;
 
 public class ContaBancaria implements OperacoesBancarias{
 

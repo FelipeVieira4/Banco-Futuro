@@ -1,10 +1,11 @@
-package com.senai.app;
-
 /**
  * Hello world!
  *
  */
-import com.senai.contas.*;
+import contas.cliente.Cliente;
+import contas.contaBancarias.ContaBancaria;
+import contas.contaBancarias.ContaFactory;
+import contas.contaBancarias.ContaInvestimento;
 
 public class App 
 {

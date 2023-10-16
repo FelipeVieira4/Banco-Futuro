@@ -1,4 +1,4 @@
-package com.senai.contas;
+package contas.contaBancarias;
 
 public interface OperacoesBancarias {
     public void visualizarSaldo();

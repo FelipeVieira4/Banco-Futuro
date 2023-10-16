@@ -1,4 +1,4 @@
-package com.senai.contas;
+package contas.cliente;
 
 public class Cliente implements ClienteAbstract{
     private int id;

@@ -1,4 +1,4 @@
-package com.senai.tipos;
+package tipos;
 
 public enum TipoInvestimeto {
   

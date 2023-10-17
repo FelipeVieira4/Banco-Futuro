@@ -8,7 +8,6 @@ import contas.contaBancarias.ContaFactory;
 import contas.contaBancarias.ContaInvestimento;
 import contas.contaBancarias.ContaPoupanca;
 import tipos.Investimento;
-import tipos.TipoInvestimeto;
 
 public class App 
 {
@@ -32,8 +31,8 @@ public class App
 
 
         //Criar investimentos
-        Investimento investimento1 = new Investimento(0,TipoInvestimeto.Agricultura,1200);
-        Investimento investimento2 = new Investimento(1,TipoInvestimeto.Agricultura,600);
+        Investimento investimento1 = new Investimento(0,1200);
+        Investimento investimento2 = new Investimento(1,600);
         
         System.out.println(cb1.getClass().getName());
 

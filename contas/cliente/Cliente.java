@@ -1,6 +1,6 @@
 package contas.cliente;
 
-public class Cliente implements ClienteMetodos{
+public class Cliente{
     private int id;
     private String nome;
     private String telefone;

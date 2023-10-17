@@ -3,12 +3,10 @@ package tipos;
 
 public class Investimento {
   private int id;
-  private TipoInvestimeto tipo;
   private float lucroMensal; 
 
-  public Investimento(int id, TipoInvestimeto tipo, float lucroMensal){
+  public Investimento(int id,float lucroMensal){
     this.setId(id);
-    this.setTipo(tipo);
     this.setLucroMensal(lucroMensal);
   }
 
@@ -17,13 +15,6 @@ public class Investimento {
   }
   public void setId(int id) {
     this.id = id;
-  }
-
-  public TipoInvestimeto getTipo() {
-    return tipo;
-  }
-  public void setTipo(TipoInvestimeto tipo) {
-    this.tipo = tipo;
   }
 
   public float getLucroMensal() {

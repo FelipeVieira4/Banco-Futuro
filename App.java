@@ -6,6 +6,7 @@ import contas.cliente.Cliente;
 import contas.contaBancarias.ContaBancaria;
 import contas.contaBancarias.ContaFactory;
 import contas.contaBancarias.ContaInvestimento;
+import contas.contaBancarias.ContaPoupanca;
 import tipos.Investimento;
 import tipos.TipoInvestimeto;
 
@@ -22,7 +23,7 @@ public class App
         
 
         //Criar conta bancaria
-        ContaBancaria cb1 = new ContaFactory().criarBancaria();
+        ContaBancaria cb1 = new ContaFactory().criarContaBancaria();
         cb1.addCliente(c1);
         cb1.addCliente(new Cliente(1, "José"));
         cb1.setId(2);
@@ -38,7 +39,7 @@ public class App
 
 
         //Criar conta investimento
-        ContaInvestimento ci1 = new ContaFactory().criarInvestimento();
+        ContaInvestimento ci1 = new ContaFactory().criarContaInvestimento();
         
         ci1.addInvestimento(investimento1);
         ci1.addInvestimento(investimento2);
@@ -51,5 +52,9 @@ public class App
 
         System.out.println(ci1.calcularLucroMensal());
 
+        ContaPoupanca cp1 = new ContaFactory().criarContaPoupanca();
+        cp1.setTaxaJuros((float)2.5);
+        System.out.println(cp1.calcularRendimento());
+        System.out.println(cp1.calcularRendimento());
     }
 }

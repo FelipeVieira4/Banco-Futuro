@@ -51,10 +51,10 @@ public class App
         ci1.addCliente(new Cliente(1, "José"));
 
         System.out.println(ci1.calcularLucroMensal());
-
+        
+        //Criar conta poupança
         ContaPoupanca cp1 = new ContaFactory().criarContaPoupanca();
         cp1.setTaxaJuros((float)2.5);
-        System.out.println(cp1.calcularRendimento());
         System.out.println(cp1.calcularRendimento());
     }
 }

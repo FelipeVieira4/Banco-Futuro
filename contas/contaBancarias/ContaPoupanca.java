@@ -1,7 +1,5 @@
 package contas.contaBancarias;
 
-import java.util.Random;
-
 public class ContaPoupanca extends ContaBancaria{
   
   private float taxaJuros=0;
@@ -15,6 +13,6 @@ public class ContaPoupanca extends ContaBancaria{
   }
   
   public float calcularRendimento(){
-    return new Random().nextInt(100)*taxaJuros;
+    return taxaJuros*((float)Math.random()*100);
   }
 }

@@ -12,9 +12,9 @@ public class ContaCorrente extends ContaBancaria{
     this.saldo += valor;
 
 
-    Calendar data = Calendar.getInstance();  
+    Calendar horario = Calendar.getInstance();  
 
-    Transacao transacao = new Transacao("Depósito",(float)valor, data);
+    Transacao transacao = new Transacao("Depósito",(float)valor, horario);
     listaTransacoes.add(transacao);
   }
 
@@ -23,8 +23,8 @@ public class ContaCorrente extends ContaBancaria{
       if (valor <= saldo) {
           this.saldo -= valor;
 
-          Calendar data = Calendar.getInstance();
-          Transacao transacao = new Transacao("Saque", (float)-valor,data);
+          Calendar horario = Calendar.getInstance();
+          Transacao transacao = new Transacao("Saque", (float)-valor,horario);
           listaTransacoes.add(transacao);
           return true;
       } else {

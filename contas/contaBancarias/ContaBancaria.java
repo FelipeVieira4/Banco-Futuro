@@ -6,7 +6,7 @@ import java.util.HashMap;
 import tipos.TipoConta;
 import contas.cliente.Cliente;
 
-public class ContaBancaria implements OperacoesBancarias{
+public abstract class ContaBancaria implements OperacoesBancarias{
 
     private HashMap<Integer,Cliente> listaCliente = new HashMap<>();
 

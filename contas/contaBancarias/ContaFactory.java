@@ -2,10 +2,6 @@ package contas.contaBancarias;
 
 public class ContaFactory {
   
-  public ContaBancaria criarContaBancaria(){
-    return new ContaBancaria();
-  }
-  
   public ContaInvestimento criarContaInvestimento(){
     return new ContaInvestimento();
   }

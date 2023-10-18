@@ -5,7 +5,7 @@ import java.util.Calendar;
 
 import tipos.Transacao;
 
-public class ContaCorrente extends ContaBancaria{
+public class ContaCorrente extends ContaBancaria implements OperacoesBancarias{
   private ArrayList<Transacao> listaTransacoes = new ArrayList<Transacao>();
 
   public void depositar(double valor) {

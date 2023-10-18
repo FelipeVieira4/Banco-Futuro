@@ -22,17 +22,6 @@ public class App
         System.out.println( "Hello World!" );
         Cliente c1 = new Cliente(0, "Felipe V.");
 
-        
-
-        //Criar conta bancaria
-        ContaBancaria cb1 = new ContaFactory().criarContaBancaria();
-        cb1.addCliente(c1);
-        cb1.addCliente(new Cliente(1, "José"));
-        cb1.setId(2);
-
-        System.out.println(cb1.getId());
-
-
         //Criar investimentos
         Investimento investimento1 = new Investimento(0,1200);
         Investimento investimento2 = new Investimento(1,600);
@@ -42,7 +31,7 @@ public class App
         
         ci1.addInvestimento(investimento1);
         ci1.addInvestimento(investimento2);
-
+        
         ci1.addCliente(c1);
         ci1.addCliente(new Cliente(1, "José"));
 

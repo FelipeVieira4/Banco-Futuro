@@ -35,7 +35,8 @@ public class App
         ci1.addCliente(c1);
         ci1.addCliente(new Cliente(1, "José"));
 
-        System.out.println("Lucro mensal:"+ci1.calcularLucroMensal());
+        ci1.calcularLucroMensal();
+        ci1.visualizarSaldo();
         
         //Criar conta poupança
         ContaPoupanca cp1 = new ContaFactory().criarContaPoupanca();

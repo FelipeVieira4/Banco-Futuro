@@ -11,7 +11,7 @@ public class ContaBancaria implements OperacoesBancarias{
     private HashMap<Integer,Cliente> listaCliente = new HashMap<>();
 
     private int id;
-    private float saldo;
+    protected float saldo;
     private TipoConta tipo;    
 
 

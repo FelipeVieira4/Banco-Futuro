@@ -46,8 +46,8 @@ public class App
         System.out.println("\n\n -- CORRENTE --");
         
         ContaCorrente cc1 = new ContaFactory().criarContaCorrente();
-        cc1.depositar(250);
-        cc1.sacar(100);
+        cc1.depositar((float)250);
+        cc1.saque((float)100);
         for(Transacao i: cc1.getlistaTransacoes()) {
         	System.out.println("Transação:"+i.getDataEspedicao().getTime()+" valor "+i.getValor());
         }

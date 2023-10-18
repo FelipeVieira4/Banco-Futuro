@@ -52,8 +52,8 @@ public abstract class ContaBancaria implements OperacoesBancarias{
     }
 
     
-    public Boolean depositar(Float valor) {
-        return false;
+    public void depositar(Float valor) {
+        return;
     }
 
 

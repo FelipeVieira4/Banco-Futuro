@@ -8,7 +8,8 @@ import tipos.Transacao;
 public class ContaCorrente extends ContaBancaria implements OperacoesBancarias{
   private ArrayList<Transacao> listaTransacoes = new ArrayList<Transacao>();
 
-  public void depositar(double valor) {
+  @Override
+  public void depositar(Float valor){
     this.saldo += valor;
 
 
@@ -18,7 +19,8 @@ public class ContaCorrente extends ContaBancaria implements OperacoesBancarias{
     listaTransacoes.add(transacao);
   }
 
-  public Boolean sacar(double valor) {
+  @Override
+  public Boolean saque(Float valor){
 
       if (valor <= saldo) {
           this.saldo -= valor;

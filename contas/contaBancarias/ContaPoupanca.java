@@ -2,7 +2,7 @@ package contas.contaBancarias;
 
 public class ContaPoupanca extends ContaBancaria{
   
-  private float taxaJuros=0;
+  private float taxaJuros=0.0f;
 
 
   public float getTaxaJuros() {

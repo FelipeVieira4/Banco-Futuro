@@ -3,13 +3,8 @@ package contas.cliente;
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 import AbstractFactory.ContaFactory;
 import contas.contaBancarias.ContaBancaria;
-import contas.contaBancarias.ContaInvestimento;
-import contas.contaBancarias.ContaPoupanca;
-import tipos.Investimento;
-import tipos.TipoConta;
 
 public class Cliente{
     private int id;
@@ -81,7 +76,10 @@ public class Cliente{
 		this.enderecos.add(endereco);
 	}
 	
-	public void criarConta(TipoConta tipo) {
-	
+	public void criarConta(ContaFactory Contafactory) {
+		this.conta.add(Contafactory.criarConta());
+	}
+	public ArrayList<ContaBancaria> getContasBancarias(){
+		return this.conta;
 	}
 }

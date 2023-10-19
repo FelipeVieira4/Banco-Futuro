@@ -1,17 +1,11 @@
 package contas.contaBancarias;
 
 import java.util.HashMap;
-
 import tipos.Investimento;
-import tipos.TipoConta;
 
 public class ContaInvestimento extends ContaBancaria{
   
   private HashMap<Integer,Investimento> listaInvestimentos = new HashMap<Integer,Investimento>();
-
-  public ContaInvestimento() {
-	  this.setTipo(TipoConta.Investimento);
-  }
   
   public void addInvestimento(Investimento i){
     listaInvestimentos.put(i.getId(), i);

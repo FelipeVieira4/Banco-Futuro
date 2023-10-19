@@ -2,11 +2,10 @@ package contas.contaBancarias;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-
 import tipos.TipoConta;
 import contas.cliente.Cliente;
 
-public abstract class ContaBancaria implements OperacoesBancarias{
+public abstract class ContaBancaria extends OperacoesBancarias{
 
     private HashMap<Integer,Cliente> listaCliente = new HashMap<>();
 
@@ -56,7 +55,7 @@ public abstract class ContaBancaria implements OperacoesBancarias{
         return;
     }
 
-
+    
 
     public TipoConta getTipo() {
         return tipo;
@@ -64,5 +63,5 @@ public abstract class ContaBancaria implements OperacoesBancarias{
     public void setTipo(TipoConta tipo) {
         this.tipo = tipo;
     }
-
+   
 }

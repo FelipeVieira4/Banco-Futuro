@@ -1,15 +1,15 @@
 package view;
+import AbstractFactory.ContaFactory;
 /**
  * Hello world!
  *
  */
 import contas.cliente.Cliente;
-import contas.contaBancarias.ContaBancaria;
 import contas.contaBancarias.ContaCorrente;
-import contas.contaBancarias.ContaFactory;
 import contas.contaBancarias.ContaInvestimento;
 import contas.contaBancarias.ContaPoupanca;
 import tipos.Investimento;
+import tipos.TipoConta;
 import tipos.Transacao;
 
 public class App 
@@ -21,12 +21,14 @@ public class App
 
         System.out.println( "Hello World!" );
         Cliente c1 = new Cliente(0, "Felipe V.");
-
+        System.out.println(c1.setCpf("123.456.789-09"));
+        
         //Criar investimentos
         Investimento investimento1 = new Investimento(0,1200);
         Investimento investimento2 = new Investimento(1,600);
         
-        //Criar conta investimento
+        new ContaFactory();
+		//Criar conta investimento
         ContaInvestimento ci1 = new ContaFactory().criarContaInvestimento();
         
         ci1.addInvestimento(investimento1);

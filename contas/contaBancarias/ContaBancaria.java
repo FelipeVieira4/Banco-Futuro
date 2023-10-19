@@ -12,7 +12,7 @@ public abstract class ContaBancaria implements OperacoesBancarias{
 
     private int id;
     protected float saldo;
-    private TipoConta tipo;    
+    private TipoConta tipo = TipoConta.Indefinida;    
 
 
     public ArrayList<Cliente> getClientes(){

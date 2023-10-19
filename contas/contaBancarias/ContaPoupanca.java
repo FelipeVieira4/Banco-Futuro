@@ -1,10 +1,16 @@
 package contas.contaBancarias;
 
+import tipos.TipoConta;
+
 public class ContaPoupanca extends ContaBancaria{
   
   private float taxaJuros=0.0f;
-
-
+  
+  public ContaPoupanca() {
+	  this.setTipo(TipoConta.Poupanca);
+  }
+  
+  
   public float getTaxaJuros() {
     return taxaJuros;
   }

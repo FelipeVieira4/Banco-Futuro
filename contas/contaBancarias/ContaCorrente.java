@@ -3,11 +3,16 @@ package contas.contaBancarias;
 import java.util.ArrayList;
 import java.util.Calendar;
 
+import tipos.TipoConta;
 import tipos.Transacao;
 
-public class ContaCorrente extends ContaBancaria implements OperacoesBancarias{
+public class ContaCorrente extends ContaBancaria{
   private ArrayList<Transacao> listaTransacoes = new ArrayList<Transacao>();
-
+  
+  public ContaCorrente() {
+	  this.setTipo(TipoConta.Corrente);
+  }
+  
   @Override
   public void depositar(Float valor){
     this.saldo += valor;

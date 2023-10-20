@@ -17,22 +17,23 @@ public class App
 
 
         System.out.println( "Hello World!" );
-        Cliente c1 = new Cliente(0, "Felipe V.");
-        System.out.println(c1.setCpf("123.456.789-09"));
+        Cliente clienteTest = new Cliente(0, "José Teste");
+        System.out.println(clienteTest.setCpf("123.456.789-09"));
         
-        c1.criarConta(new ContaCorrenteFactory());
+        clienteTest.criarConta(new ContaCorrenteFactory());
         
-        c1.getContasBancarias().get(0).depositar((float)250);
+        clienteTest.getContasBancarias().get(0).depositar((float)250);
+        clienteTest.getContasBancarias().get(0).saque((float)100);
         
-        for(Transacao i: c1.getContasBancarias().get(0).getlistaTransacoes()) {
+        for(Transacao i: clienteTest.getContasBancarias().get(0).getlistaTransacoes()) {
         	System.out.println("Transação:"+i.getDataEspedicao().getTime()+" valor "+i.getValor());
         }
 
-        c1.criarConta(new ContaInvestimentoFactory());
-        c1.getContasBancarias().get(1).addInvestimento(new Investimento(0, 250));
-        c1.getContasBancarias().get(1).addInvestimento(new Investimento(1, 2500));
+        clienteTest.criarConta(new ContaInvestimentoFactory());
+        clienteTest.getContasBancarias().get(1).addInvestimento(new Investimento(0, 250));
+        clienteTest.getContasBancarias().get(1).addInvestimento(new Investimento(1, 2500));
 
-        c1.getContasBancarias().get(1).calcularLucroMensal();
-        System.out.println("Saldo:"+c1.getContasBancarias().get(1).getSaldo());
+        clienteTest.getContasBancarias().get(1).calcularLucroMensal();
+        System.out.println("Saldo:"+clienteTest.getContasBancarias().get(1).getSaldo());
     }
 }

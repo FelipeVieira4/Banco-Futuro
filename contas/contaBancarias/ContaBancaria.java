@@ -1,29 +1,19 @@
 package contas.contaBancarias;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import tipos.TipoConta;
-import contas.cliente.Cliente;
-
 public abstract class ContaBancaria extends OperacoesBancarias{
-
-    private HashMap<Integer,Cliente> listaCliente = new HashMap<>();
-
+	
     private int id;
     protected float saldo;
-    private TipoConta tipo = TipoConta.Indefinida;    
-
-
-    public ArrayList<Cliente> getClientes(){
-        return new ArrayList<Cliente>(listaCliente.values());
+    
+    //Métodos construtores
+    public ContaBancaria(){}
+    
+    public ContaBancaria(float saldo) {
+    	this.saldo=saldo;
     }
-    public void removeCliente(Integer id){
-        listaCliente.remove(id);
-    }
-    public void addCliente(Cliente c){
-        listaCliente.put(c.getId(), c);
-    }
-
+    
+    //Getters e Setters
+    
     public int getId() {
         return id;
     }
@@ -53,15 +43,6 @@ public abstract class ContaBancaria extends OperacoesBancarias{
     
     public void depositar(Float valor) {
         return;
-    }
-
-    
-
-    public TipoConta getTipo() {
-        return tipo;
-    }
-    public void setTipo(TipoConta tipo) {
-        this.tipo = tipo;
     }
    
 }

@@ -6,6 +6,7 @@ package view;
  */
 import AbstractFactory.*;
 import contas.cliente.Cliente;
+import tipos.Investimento;
 import tipos.Transacao;
 
 public class App 
@@ -26,5 +27,12 @@ public class App
         for(Transacao i: c1.getContasBancarias().get(0).getlistaTransacoes()) {
         	System.out.println("Transação:"+i.getDataEspedicao().getTime()+" valor "+i.getValor());
         }
+
+        c1.criarConta(new ContaInvestimentoFactory());
+        c1.getContasBancarias().get(1).addInvestimento(new Investimento(0, 250));
+        c1.getContasBancarias().get(1).addInvestimento(new Investimento(1, 2500));
+
+        c1.getContasBancarias().get(1).calcularLucroMensal();
+        System.out.println("Saldo:"+c1.getContasBancarias().get(1).getSaldo());
     }
 }

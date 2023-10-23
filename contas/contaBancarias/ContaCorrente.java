@@ -8,7 +8,7 @@ public class ContaCorrente extends ContaBancaria{
   private ArrayList<Transacao> listaTransacoes = new ArrayList<Transacao>();
   
   @Override
-  public void depositar(Float valor){
+  public void depositar(double valor){
     this.saldo += valor;
 
 
@@ -19,7 +19,7 @@ public class ContaCorrente extends ContaBancaria{
   }
 
   @Override
-  public Boolean saque(Float valor){
+  public Boolean sacar(double valor){
 
       if (valor <= saldo) {
           this.saldo -= valor;

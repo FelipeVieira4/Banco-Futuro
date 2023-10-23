@@ -22,8 +22,8 @@ public class App
         
         clienteTest.criarConta(new ContaCorrenteFactory());
         
-        clienteTest.getContasBancarias().get(0).depositar((float)250);
-        clienteTest.getContasBancarias().get(0).saque((float)100);
+        clienteTest.getContasBancarias().get(0).depositar(250.0f);
+        clienteTest.getContasBancarias().get(0).sacar(100.0f);
         
         for(Transacao i: clienteTest.getContasBancarias().get(0).getlistaTransacoes()) {
         	System.out.println("Transação:"+i.getDataEspedicao().getTime()+" valor "+i.getValor());
@@ -34,6 +34,7 @@ public class App
         clienteTest.getContasBancarias().get(1).addInvestimento(new Investimento(1, 2500));
 
         clienteTest.getContasBancarias().get(1).calcularLucroMensal();
+        clienteTest.getContasBancarias().get(1).depositar(250.0f);
         System.out.println("Saldo:"+clienteTest.getContasBancarias().get(1).getSaldo());
     }
 }

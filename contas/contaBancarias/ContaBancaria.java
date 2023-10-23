@@ -3,7 +3,7 @@ package contas.contaBancarias;
 public abstract class ContaBancaria extends OperacoesBancarias{
 	
     private int id;
-    protected float saldo;
+    protected double saldo;
     
     //Métodos construtores
     public ContaBancaria(){}
@@ -22,10 +22,10 @@ public abstract class ContaBancaria extends OperacoesBancarias{
     }
 
 
-    public float getSaldo() {
+    public double getSaldo() {
         return saldo;
     }
-    public void setSaldo(float saldo) {
+    public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
 
@@ -35,14 +35,42 @@ public abstract class ContaBancaria extends OperacoesBancarias{
         return;        
     }
 
-
-    public Boolean saque(Float valor) {
-        return false;
+    public Boolean sacar(double valor) {
+        if (valor > 0 && valor <= saldo) {
+            saldo -= valor;
+            System.out.println("Saque de R$" + valor + ".");
+            return true;
+        } else {
+            System.out.println("Saldo insuficiente ou valor inválido.");
+            return false;
+        }
     }
-
     
-    public void depositar(Float valor) {
-        return;
+    public void depositar(double valor) {
+        if (valor > 0) {
+            saldo += valor;
+            System.out.println("Depósito de R$" + valor + ".");
+        } else {
+            System.out.println("Valor de depósito inválido.");
+        }
     }
-   
+
+    public void transferir(ContaBancaria destino, double valor) {
+        if (valor > 0 && valor <= saldo) {
+            saldo -= valor;
+            destino.depositar(valor);
+            System.out.println("Transferência de R$" + valor + " para a conta de " + destino.getId() + ".");
+        } else {
+            System.out.println("Saldo insuficiente ou valor inválido.");
+        }
+    }
+
+    public void pagamento(double valor) {
+        if (valor > 0 && valor <= saldo) {
+            saldo -= valor;
+            System.out.println("Pagamento de R$" + valor + "realizado.");
+        } else {
+            System.out.println("Saldo insuficiente ou valor inválido.");
+        }
+    }
 }

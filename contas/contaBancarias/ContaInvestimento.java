@@ -1,8 +1,6 @@
 package contas.contaBancarias;
 
 import java.util.HashMap;
-
-
 import tipos.Investimento;
 
 public class ContaInvestimento extends ContaBancaria{
@@ -19,6 +17,8 @@ public class ContaInvestimento extends ContaBancaria{
     listaInvestimentos.remove(id);
   }
 
+
+  //Somar os lucros de cada invesimento e colocar no saldo
   @Override
   public void calcularLucroMensal(){
     

@@ -25,6 +25,13 @@ public class App
         clienteTest.getContasBancarias().get(0).depositar(250.0f);
         clienteTest.getContasBancarias().get(0).sacar(100.0f);
         
+        //Retorna exception
+        try{
+            clienteTest.getContasBancarias().get(0).setTaxaJuros(250.0f);
+        }catch(UnsupportedOperationException e){
+            System.out.println("Conta Bancaria sem");
+        }
+
         for(Transacao i: clienteTest.getContasBancarias().get(0).getlistaTransacoes()) {
         	System.out.println("Transação:"+i.getDataEspedicao().getTime()+" valor "+i.getValor());
         }

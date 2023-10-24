@@ -5,16 +5,27 @@ import java.util.ArrayList;
 import tipos.Investimento;
 import tipos.Transacao;
 
+/**
+  Métodos das Classes que extedem a ContaBancaria.
+  Esses métodos são incializados com um Exception para que um conta não consiga utilizar métodos
+  de outra conta.
+**/
+
 public abstract class OperacoesBancarias {
 	
-	public float getTaxaJuros() {return 0.0f;}
-  public void setTaxaJuros(float taxaJuros) {return;}
-  	
-  public ArrayList<Transacao> getlistaTransacoes(){return null;}
-    
-	public float calcularRendimento() {return 0.0f;}
+  private final String mensagem = "Classe sem supporte a esse método";
 
-	public void addInvestimento(Investimento i){ return;}
-  public void removeInvestimento(int id){ return;}
-  public void calcularLucroMensal(){ return;}
+
+  //Métodos da ContaCorrente
+  public ArrayList<Transacao> getlistaTransacoes(){throw new UnsupportedOperationException(mensagem);}
+    
+  //Métodos da ContaPoupança
+	public float getTaxaJuros() {throw new UnsupportedOperationException(mensagem);}
+  public void setTaxaJuros(float taxaJuros) {throw new UnsupportedOperationException(mensagem);}
+	public float calcularRendimento() {throw new UnsupportedOperationException(mensagem);}
+
+  //Métodos da ContaInvestimento
+	public void addInvestimento(Investimento i){throw new UnsupportedOperationException(mensagem);}
+  public void removeInvestimento(int id){throw new UnsupportedOperationException(mensagem);}
+  public void calcularLucroMensal(){throw new UnsupportedOperationException(mensagem);}
 }

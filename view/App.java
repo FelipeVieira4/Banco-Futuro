@@ -15,8 +15,6 @@ public class App
     {
         
 
-
-        System.out.println( "Hello World!" );
         Cliente clienteTest = new Cliente(0, "José Teste");
         System.out.println(clienteTest.setCpf("123.456.789-09"));
         

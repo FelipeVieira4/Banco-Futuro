@@ -1,6 +1,6 @@
 package contas.contaBancarias;
 
-public abstract class ContaBancaria extends OperacoesBancarias{
+public class ContaBancaria extends OperacoesBancarias{
 	
     private int id;
     protected double saldo;

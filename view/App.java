@@ -37,8 +37,8 @@ public class App
         }
 
         clienteTest.criarConta(new ContaInvestimentoFactory());
-        clienteTest.getContasBancarias().get(1).addInvestimento(new Investimento(0, 250));
-        clienteTest.getContasBancarias().get(1).addInvestimento(new Investimento(1, 2500));
+        clienteTest.getContasBancarias().get(1).addInvestimento(new Investimento("inv_1_a", 250));
+        clienteTest.getContasBancarias().get(1).addInvestimento(new Investimento("inv_2_g", 2500));
 
         clienteTest.getContasBancarias().get(1).calcularLucroMensal();
         clienteTest.getContasBancarias().get(1).depositar(250.0f);

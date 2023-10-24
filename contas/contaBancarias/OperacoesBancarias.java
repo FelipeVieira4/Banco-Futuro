@@ -26,6 +26,6 @@ public abstract class OperacoesBancarias {
 
   //Métodos da ContaInvestimento
 	public void addInvestimento(Investimento i){throw new UnsupportedOperationException(mensagem);}
-  public void removeInvestimento(int id){throw new UnsupportedOperationException(mensagem);}
+  public void removeInvestimento(String id){throw new UnsupportedOperationException(mensagem);}
   public void calcularLucroMensal(){throw new UnsupportedOperationException(mensagem);}
 }

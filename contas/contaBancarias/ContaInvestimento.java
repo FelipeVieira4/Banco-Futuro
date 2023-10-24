@@ -5,7 +5,7 @@ import tipos.Investimento;
 
 public class ContaInvestimento extends ContaBancaria{
   
-  private HashMap<Integer,Investimento> listaInvestimentos = new HashMap<Integer,Investimento>();
+  private HashMap<String,Investimento> listaInvestimentos = new HashMap<String,Investimento>();
   
   @Override
   public void addInvestimento(Investimento i){
@@ -13,7 +13,7 @@ public class ContaInvestimento extends ContaBancaria{
   }
 
   @Override
-  public void removeInvestimento(int id){
+  public void removeInvestimento(String id){
     listaInvestimentos.remove(id);
   }
 

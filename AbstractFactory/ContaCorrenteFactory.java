@@ -10,9 +10,7 @@ public class ContaCorrenteFactory implements ContaFactory {
 	}
 	
 	@Override
-	public ContaBancaria criarConta(float saldo) {
-		ContaCorrente newContaCorrente = new ContaCorrente();
-		newContaCorrente.setSaldo(saldo);
-		return newContaCorrente;
+	public ContaBancaria criarConta(int id, double saldo) {
+		return new ContaCorrente(id,saldo);
 	}
 }

@@ -7,6 +7,16 @@ import tipos.Transacao;
 public class ContaCorrente extends ContaBancaria{
   private ArrayList<Transacao> listaTransacoes = new ArrayList<Transacao>();
   
+  public ContaCorrente() {}
+  
+  public ContaCorrente(int id){
+	  super(id);
+  }
+  
+  public ContaCorrente(int id,double saldo){
+	  super(id,saldo);
+  }
+  
   @Override
   public void depositar(double valor){
     this.saldo += valor;
@@ -43,6 +53,7 @@ public class ContaCorrente extends ContaBancaria{
 	System.out.println("\n---Saldo da conta corrente é:--- ");
 	for(Transacao i: this.getlistaTransacoes()) {
 	  System.out.println("Transação:"+i.getDataEspedicao().getTime()+" valor "+i.getValor());
-	}       
+	}
+	System.out.println("Saldo total:"+this.getSaldo());
   }
 }

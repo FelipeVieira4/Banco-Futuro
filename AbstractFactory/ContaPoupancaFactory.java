@@ -10,9 +10,7 @@ public class ContaPoupancaFactory implements ContaFactory{
 	}
 	
 	@Override
-	public ContaBancaria criarConta(float saldo) {
-		ContaPoupanca newContaPoupanca = new ContaPoupanca();
-		newContaPoupanca.setSaldo(saldo);
-		return newContaPoupanca;
+	public ContaBancaria criarConta(int id, double saldo) {
+		return new ContaPoupanca(id,saldo);
 	}
 }

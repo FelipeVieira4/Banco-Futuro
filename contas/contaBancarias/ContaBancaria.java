@@ -8,8 +8,13 @@ public class ContaBancaria extends OperacoesBancarias{
   //Métodos construtores
   public ContaBancaria(){}
 
-  public ContaBancaria(float saldo) {
-    this.saldo=saldo;
+  public ContaBancaria(int id) {
+    this.setId(id);
+  }
+  
+  public ContaBancaria(int id,double saldo) {
+	this.setId(id);
+	this.setSaldo(saldo);
   }
     
   //Getters e Setters

@@ -14,29 +14,31 @@ public class App
   {
 
     
-    Cliente clienteTest = new Cliente(0, "José Teste");
-    System.out.println("Validação CPF é:"+clienteTest.setCpf("123.456.789-09"));
+    Cliente clienteConta = new Cliente(0, "José Teste");
+    System.out.println("Validação CPF é:"+clienteConta.setCpf("123.456.789-09"));
     
-    clienteTest.criarConta(new ContaCorrenteFactory().criarConta(250.0f));
+    //Adicionar uma conta corrente com saldo de 250.0
+    clienteConta.criarConta(new ContaCorrenteFactory().criarConta(0,250.0f));
     
-    clienteTest.getContasBancarias().get(0).depositar(250.0f);
-    clienteTest.getContasBancarias().get(0).sacar(100.0f);
+    clienteConta.getContasBancarias().get(0).depositar(250.0f);
+    clienteConta.getContasBancarias().get(0).sacar(100.0f);
+    
+    clienteConta.getContasBancarias().get(0).visualizarSaldo();
     
     //Retorna exception
     try{
-        clienteTest.getContasBancarias().get(0).setTaxaJuros(250.0f);
+        clienteConta.getContasBancarias().get(0).setTaxaJuros(250.0f);
     }catch(UnsupportedOperationException e){
-        System.out.println("Operação não Encontrada");
+        System.out.println("\nOperação não Encontrada não encontrada na Conta\n");
     }
 
-    clienteTest.getContasBancarias().get(0).visualizarSaldo();
+    //Adicionar um conta invesimento
+    clienteConta.criarConta(new ContaInvestimentoFactory().criarConta());
+    
+    clienteConta.getContasBancarias().get(1).addInvestimento(new Investimento("inv_1_a", 250));
+    clienteConta.getContasBancarias().get(1).addInvestimento(new Investimento("inv_2_g", 2500));
 
-
-    clienteTest.criarConta(new ContaInvestimentoFactory().criarConta(250.0f));
-    clienteTest.getContasBancarias().get(1).addInvestimento(new Investimento("inv_1_a", 250));
-    clienteTest.getContasBancarias().get(1).addInvestimento(new Investimento("inv_2_g", 2500));
-
-    clienteTest.getContasBancarias().get(1).calcularLucroMensal();    
-    clienteTest.getContasBancarias().get(1).visualizarSaldo();
+    clienteConta.getContasBancarias().get(1).calcularLucroMensal();    
+    clienteConta.getContasBancarias().get(1).visualizarSaldo();
   }
 }

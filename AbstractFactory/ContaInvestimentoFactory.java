@@ -9,11 +9,11 @@ public class ContaInvestimentoFactory implements ContaFactory{
 		return new ContaInvestimento();
 	}
 	
+
 	@Override
-	public ContaBancaria criarConta(float saldo) {
-		ContaInvestimento newContaInvestimento = new ContaInvestimento();
-		newContaInvestimento.setSaldo(saldo);
-		return newContaInvestimento;
+	public ContaBancaria criarConta(int id, double saldo) {
+		// TODO Auto-generated method stub
+		return new ContaInvestimento(id,saldo);
 	}
 	
 }

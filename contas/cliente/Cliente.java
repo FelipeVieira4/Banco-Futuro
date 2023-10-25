@@ -12,8 +12,9 @@ public class Cliente{
   private String nome;
   private String telefone;
   private String cpf;
+  private String email;
+  
   private ArrayList<String> enderecos = new ArrayList<String>();
-
   private ArrayList<ContaBancaria> conta = new ArrayList<ContaBancaria>();
   
   public Cliente(int id,String nome){
@@ -36,12 +37,12 @@ public class Cliente{
     return nome;
   }
 
-  public void setNome(String nome) {
+  public Boolean setNome(String nome) {
     if(!nome.isBlank() && nome!=null){
       this.nome = nome;
-      return;
+      return true;
     }
-    this.nome="";
+    return false;
   }
 
 
@@ -56,6 +57,7 @@ public class Cliente{
     return cpf;
   }
 
+  //Validar e setar o CPF
   public Boolean setCpf(String cpf) {
     Pattern pattern = Pattern.compile("^(\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}|\\d{11})$");
     Matcher matcher = pattern.matcher(cpf);
@@ -68,9 +70,24 @@ public class Cliente{
   }
 
 
+  public String getEmail() {
+	return this.email;
+  }
+
+  public Boolean setEmail(String email) {
+    if(!email.isBlank() && email!=null){
+      this.email = email;
+      return true;
+    }
+    return false;
+  }
+
+  //Setar o endereço apartir de um array já difinida
   public void setEnderecos(ArrayList<String> enderecos) {
     this.enderecos = enderecos;
   }
+  
+  //Adicionar um endereço ao cliente
   public void addEndereco(String endereco) {
     this.enderecos.add(endereco);
   }
@@ -78,6 +95,8 @@ public class Cliente{
     return enderecos;
   }
 
+  
+  //
   public void criarConta(ContaBancaria c) {
     this.conta.add(c);
   }

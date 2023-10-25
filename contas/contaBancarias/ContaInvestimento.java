@@ -7,6 +7,16 @@ public class ContaInvestimento extends ContaBancaria{
   
   private HashMap<String,Investimento> listaInvestimentos = new HashMap<String,Investimento>();
   
+  public ContaInvestimento() {}
+  
+  public ContaInvestimento(int id){
+	  super(id);
+  }
+  
+  public ContaInvestimento(int id,double saldo){
+	  super(id,saldo);
+  }
+  
   @Override
   public void addInvestimento(Investimento i){
     listaInvestimentos.put(i.getId(), i);

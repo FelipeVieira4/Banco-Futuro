@@ -4,6 +4,16 @@ public class ContaPoupanca extends ContaBancaria{
   
   private float taxaJuros=0.0f;
   
+  public ContaPoupanca() {}
+  
+  public ContaPoupanca(int id){
+	  super(id);
+  }
+  
+  public ContaPoupanca(int id,double saldo){
+	  super(id,saldo);
+  }
+  
   @Override
   public float getTaxaJuros() {
     return taxaJuros;

@@ -18,7 +18,7 @@ public class App
     Cliente clienteTest = new Cliente(0, "José Teste");
     System.out.println(clienteTest.setCpf("123.456.789-09"));
     
-    clienteTest.criarConta(new ContaCorrenteFactory());
+    clienteTest.criarConta(new ContaCorrenteFactory().criarConta(250.0f));
     
     clienteTest.getContasBancarias().get(0).depositar(250.0f);
     clienteTest.getContasBancarias().get(0).sacar(100.0f);
@@ -34,7 +34,7 @@ public class App
       System.out.println("Transação:"+i.getDataEspedicao().getTime()+" valor "+i.getValor());
     }
 
-    clienteTest.criarConta(new ContaInvestimentoFactory());
+    clienteTest.criarConta(new ContaInvestimentoFactory().criarConta(250.0f));
     clienteTest.getContasBancarias().get(1).addInvestimento(new Investimento("inv_1_a", 250));
     clienteTest.getContasBancarias().get(1).addInvestimento(new Investimento("inv_2_g", 2500));
 

@@ -79,8 +79,8 @@ public class Cliente{
     return enderecos;
   }
 
-  public void criarConta(ContaFactory Contafactory) {
-    this.conta.add(Contafactory.criarConta());
+  public void criarConta(ContaBancaria c) {
+    this.conta.add(c);
   }
   public ArrayList<ContaBancaria> getContasBancarias(){
     return this.conta;

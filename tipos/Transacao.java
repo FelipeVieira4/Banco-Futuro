@@ -37,5 +37,4 @@ public class Transacao {
     this.dataEspedicao = pdataEspedicao;
   }
 
-  
 }

@@ -17,6 +17,8 @@ public class App
     Cliente clienteConta = new Cliente(0, "José Teste");
     System.out.println("Validação CPF é:"+clienteConta.setCpf("123.456.789-09"));
     
+    clienteConta.setEmail("felipe@gmail.com");
+    
     //Adicionar uma conta corrente com saldo de 250.0
     clienteConta.criarConta(new ContaCorrenteFactory().criarConta(0,250.0f));
     

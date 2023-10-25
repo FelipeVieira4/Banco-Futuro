@@ -1,8 +1,6 @@
 package contas.cliente;
 
 import java.util.ArrayList;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import contas.contaBancarias.ContaBancaria;
 
 public class Cliente{
@@ -59,10 +57,8 @@ public class Cliente{
 
   //Validar e setar o CPF
   public Boolean setCpf(String cpf) {
-    Pattern pattern = Pattern.compile("^(\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}|\\d{11})$");
-    Matcher matcher = pattern.matcher(cpf);
-
-    if(matcher.matches()) {
+	  
+    if(Validacao.Cpf(cpf) && cpf!=null && !cpf.isBlank()) {
       this.cpf = cpf;
       return true;
     }
@@ -75,10 +71,13 @@ public class Cliente{
   }
 
   public Boolean setEmail(String email) {
-    if(!email.isBlank() && email!=null){
+
+    if(!email.isBlank() && email!=null && Validacao.Email(email)){
       this.email = email;
+      System.out.println("Email aceito");
       return true;
     }
+    System.out.print("Email não aceito");
     return false;
   }
 

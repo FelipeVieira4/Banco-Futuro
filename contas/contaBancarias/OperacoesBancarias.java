@@ -20,12 +20,12 @@ public abstract class OperacoesBancarias {
   public ArrayList<Transacao> getlistaTransacoes(){throw new UnsupportedOperationException(mensagem);}
     
   //Métodos da ContaPoupança
-	public float getTaxaJuros() {throw new UnsupportedOperationException(mensagem);}
+  public float getTaxaJuros() {throw new UnsupportedOperationException(mensagem);}
   public void setTaxaJuros(float taxaJuros) {throw new UnsupportedOperationException(mensagem);}
-	public float calcularRendimento() {throw new UnsupportedOperationException(mensagem);}
+  public float calcularRendimento() {throw new UnsupportedOperationException(mensagem);}
 
   //Métodos da ContaInvestimento
-	public void addInvestimento(Investimento i){throw new UnsupportedOperationException(mensagem);}
+  public void addInvestimento(Investimento i){throw new UnsupportedOperationException(mensagem);}
   public void removeInvestimento(String id){throw new UnsupportedOperationException(mensagem);}
   public void calcularLucroMensal(){throw new UnsupportedOperationException(mensagem);}
 }

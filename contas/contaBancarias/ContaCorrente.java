@@ -11,7 +11,6 @@ public class ContaCorrente extends ContaBancaria{
   public void depositar(double valor){
     this.saldo += valor;
 
-
     Calendar horario = Calendar.getInstance();  
 
     Transacao transacao = new Transacao("Depósito",(float)valor, horario);
@@ -23,7 +22,7 @@ public class ContaCorrente extends ContaBancaria{
 
     if (valor <= saldo) {
       this.saldo -= valor;
-
+      
       Calendar horario = Calendar.getInstance();
       Transacao transacao = new Transacao("Saque", (float)-valor,horario);
       listaTransacoes.add(transacao);
@@ -34,7 +33,16 @@ public class ContaCorrente extends ContaBancaria{
     return false;
   }
 
+  //Puxar lista de transações da conta
   public ArrayList<Transacao> getlistaTransacoes(){
     return this.listaTransacoes;
+  }
+  
+  @Override
+  public void visualizarSaldo() {
+	System.out.println("\n---Saldo da conta corrente é:--- ");
+	for(Transacao i: this.getlistaTransacoes()) {
+	  System.out.println("Transação:"+i.getDataEspedicao().getTime()+" valor "+i.getValor());
+	}       
   }
 }

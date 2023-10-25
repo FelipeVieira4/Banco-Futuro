@@ -18,4 +18,11 @@ public class ContaPoupanca extends ContaBancaria{
   public float calcularRendimento(){
     return taxaJuros*((float)Math.random()*100);
   }
+
+  @Override
+  public void visualizarSaldo() {
+      System.out.println("\n---Saldo da conta Pupança é:--- "+(taxaJuros + this.getSaldo()));
+       
+      
+  }
 }

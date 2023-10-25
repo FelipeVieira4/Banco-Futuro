@@ -3,7 +3,6 @@ package contas.cliente;
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import AbstractFactory.ContaFactory;
 import contas.contaBancarias.ContaBancaria;
 
 public class Cliente{

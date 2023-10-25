@@ -30,5 +30,11 @@ public class ContaInvestimento extends ContaBancaria{
     //return (float)listaInvestimentos.values().stream().mapToDouble(Investimento::getLucroMensal).sum();
   }
   
-
+  @Override
+  public void visualizarSaldo() {
+      System.out.println("Saldo da conta Investimento é: ");
+      for(Investimento i: listaInvestimentos.values()){
+    		System.out.println("Investimento:"+i.getId()+" lucro:"+i.getLucroMensal());
+        }
+   }
 }

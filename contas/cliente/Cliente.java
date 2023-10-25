@@ -47,8 +47,13 @@ public class Cliente{
   public String getTelefone() {
     return telefone;
   }
-  public void setTelefone(String telefone) {
-    this.telefone = telefone;
+  public Boolean setTelefone(String telefone) {
+	if(telefone!=null && !telefone.isBlank()) {
+		this.telefone = telefone;
+		return true;
+	}
+	System.out.println("Telefone não aceito");
+	return false;
   }
 
   public String getCpf() {

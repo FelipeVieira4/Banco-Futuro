@@ -45,6 +45,7 @@ public class ContaInvestimento extends ContaBancaria{
       System.out.println("Saldo da conta Investimento é: ");
       for(Investimento i: listaInvestimentos.values()){
     		System.out.println("Investimento:"+i.getId()+" lucro:"+i.getLucroMensal());
-        }
-   }
+      }
+      System.out.println("Lucro da conta "+this.getId()+" é R$"+this.getSaldo());
+  }
 }

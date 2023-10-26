@@ -19,7 +19,7 @@ public class ContaCorrente extends ContaBancaria{
   
   @Override
   public void depositar(double valor){
-    this.saldo += valor;
+    super.depositar(valor);
 
     Calendar horario = Calendar.getInstance();  
 
@@ -30,8 +30,8 @@ public class ContaCorrente extends ContaBancaria{
   @Override
   public Boolean sacar(double valor){
 
-    if (valor <= saldo) {
-      this.saldo -= valor;
+    if (valor <= this.getSaldo()) {
+      super.sacar(valor);
       
       Calendar horario = Calendar.getInstance();
       Transacao transacao = new Transacao("Saque", (float)-valor,horario);

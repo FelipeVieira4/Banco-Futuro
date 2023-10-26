@@ -31,7 +31,7 @@ public class App
     }
 
     //Adicionar um conta invesimento
-    clienteConta.criarConta(new ContaInvestimentoFactory().criarConta());
+    clienteConta.criarConta(new ContaInvestimentoFactory().criarConta(2,200.0f));
     
     clienteConta.getContasBancarias().get(1).addInvestimento(new Investimento("inv_1_a", 250));
     clienteConta.getContasBancarias().get(1).addInvestimento(new Investimento("inv_2_g", 2500));

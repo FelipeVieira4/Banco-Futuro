@@ -36,7 +36,7 @@ public class ContaInvestimento extends ContaBancaria{
     for(Investimento i: listaInvestimentos.values()){
       lucro+=i.getLucroMensal();
     }
-    this.saldo+=lucro;
+    super.depositar(lucro);
     //return (float)listaInvestimentos.values().stream().mapToDouble(Investimento::getLucroMensal).sum();
   }
   

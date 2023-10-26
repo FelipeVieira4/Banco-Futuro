@@ -3,7 +3,7 @@ package contas.contaBancarias;
 public abstract class ContaBancaria extends OperacoesBancarias{
 	
   private int id;
-  protected double saldo;
+  private double saldo;
 
   //Métodos construtores
   public ContaBancaria(){}

@@ -11,7 +11,7 @@ public class App
 
     
     Cliente clienteConta = new Cliente(0, "José Teste");
-    System.out.println("Validação CPF é:"+clienteConta.setCpf("123.456.789-09"));
+    System.out.println("Validação CPF é:"+clienteConta.setCpf("123.456.789-10"));
     
     clienteConta.setEmail("test@gmail.com");
     

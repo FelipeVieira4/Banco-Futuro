@@ -30,7 +30,7 @@ public class App
         System.out.println("\nOperação não Encontrada não encontrada na Conta\n");
     }
       
-    //Adicionar um conta invesimento
+    //Adicionar um conta investimento
     clienteConta.criarConta(new ContaInvestimentoFactory().criarConta(2,200.0f));
     
     clienteConta.getContasBancarias().get(1).addInvestimento(new Investimento("inv_1_a", 250));

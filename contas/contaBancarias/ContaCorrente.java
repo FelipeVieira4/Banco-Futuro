@@ -2,19 +2,25 @@ package contas.contaBancarias;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+
+import tipos.TipoConta;
 import tipos.Transacao;
 
 public class ContaCorrente extends ContaBancaria{
   private ArrayList<Transacao> listaTransacoes = new ArrayList<Transacao>();
   
-  public ContaCorrente() {}
+  public ContaCorrente() {
+	  super.setTipo(TipoConta.Corrente);
+  }
   
   public ContaCorrente(int id){
 	  super(id);
+	  super.setTipo(TipoConta.Corrente);
   }
   
   public ContaCorrente(int id,double saldo){
 	  super(id,saldo);
+	  super.setTipo(TipoConta.Corrente);
   }
   
   @Override

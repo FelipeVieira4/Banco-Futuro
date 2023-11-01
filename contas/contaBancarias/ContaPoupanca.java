@@ -1,23 +1,17 @@
 package contas.contaBancarias;
 
-import tipos.TipoConta;
-
 public class ContaPoupanca extends ContaBancaria{
   
   private float taxaJuros=0.0f;
   
-  public ContaPoupanca() {
-	  super.setTipo(TipoConta.Poupanca);
-  }
+  public ContaPoupanca() {}
   
   public ContaPoupanca(int id){
 	  super(id);
-	  super.setTipo(TipoConta.Poupanca);
   }
   
   public ContaPoupanca(int id,double saldo){
 	  super(id,saldo);
-	  super.setTipo(TipoConta.Poupanca);
   }
   
   @Override

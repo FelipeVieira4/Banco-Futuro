@@ -22,7 +22,7 @@ public class App
     clienteConta.getContasBancarias().get(0).sacar(100.0f);
     
     clienteConta.getContasBancarias().get(0).visualizarSaldo();
-
+    
     //Retorna exception
     try{
         clienteConta.getContasBancarias().get(0).setTaxaJuros(250.0f);

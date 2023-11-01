@@ -1,10 +1,14 @@
 package contas.contaBancarias;
 
+import tipos.TipoConta;
+
 public abstract class ContaBancaria extends OperacoesBancarias{
 	
   private int id;
   private double saldo;
 
+  private TipoConta tipo=TipoConta.Indefinida;
+  
   //Métodos construtores
   public ContaBancaria(){}
 
@@ -78,4 +82,9 @@ public abstract class ContaBancaria extends OperacoesBancarias{
       System.out.println("Saldo insuficiente ou valor inválido.");
     }
   }
+  
+  
+  public TipoConta getTipo() {return tipo;}
+  public void setTipo(TipoConta tipo) {this.tipo = tipo;}
+
 }

@@ -1,6 +1,10 @@
 package contas.contaBancarias;
 
+import java.util.ArrayList;
+
+import tipos.Investimento;
 import tipos.TipoConta;
+import tipos.Transacao;
 
 public abstract class ContaBancaria extends OperacoesBancarias{
 	
@@ -86,5 +90,28 @@ public abstract class ContaBancaria extends OperacoesBancarias{
   
   public TipoConta getTipo() {return tipo;}
   public void setTipo(TipoConta tipo) {this.tipo = tipo;}
+
+  //Métodos reescritos para retornar erro
+  
+  @Override
+  public ArrayList<Transacao> getlistaTransacoes() {return null;}
+  
+  @Override
+  public void addInvestimento(Investimento i) {return;}
+  
+  @Override
+  public void removeInvestimento(String id) {return;}
+  
+  @Override
+  public void calcularLucroMensal() {return;}
+  
+  @Override
+  public float getTaxaJuros() {return 0;}
+  
+  @Override
+  public void setTaxaJuros(float taxaJuros) {}
+  
+  @Override
+  public float calcularRendimento() {return 0;} 
 
 }

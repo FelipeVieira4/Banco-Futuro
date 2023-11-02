@@ -24,11 +24,7 @@ public class App
     clienteConta.getContasBancarias().get(0).visualizarSaldo();
     
     //Retorna exception
-    try{
-        clienteConta.getContasBancarias().get(0).setTaxaJuros(250.0f);
-    }catch(UnsupportedOperationException e){
-        System.out.println("\nOperação não Encontrada não encontrada na Conta\n");
-    }
+    clienteConta.getContasBancarias().get(0).setTaxaJuros(250.0f);
       
     //Adicionar um conta investimento
     clienteConta.criarConta(new ContaInvestimentoFactory().criarConta(2,200.0f));
